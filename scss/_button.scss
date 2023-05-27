@@ -1,0 +1,101 @@
+.service_btn {
+  width: 104px;
+  line-height: 2;
+  border-bottom: 3px solid $gray;
+  margin-top: 5%;
+  margin-left: 73%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: 0;
+    width: 104px;
+    height: 35px;
+    background-color: $gray;
+    transition: transform 0.4s;
+    transform-origin: left bottom;
+    transform: scale(1, 0);
+  }
+
+  &:hover::before {
+    transform: scale(1, 1);
+  }
+
+  &_reverse {
+    margin-left: 62%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: $black;
+
+    &:hover {
+    color: $white;
+    }
+  }
+}
+
+.contact_btn {
+  display: block;
+  color: $black;
+  border: 2px solid $black;
+  cursor: pointer;
+  background-color: $white;
+  width: 152px;
+  margin: 0 auto;
+  line-height: 3;
+}
+
+@media screen and (max-width: 1024px) {
+.service_btn {
+  margin-left: 69%;
+
+  &_reverse {
+    margin-left: 64%;
+  }
+}
+
+}
+
+@media screen and (max-width: 768px) {
+.service_btn {
+  width: 70px;
+  line-height: 2;
+  margin-top: 7.5%;
+  margin-left: 73%;
+
+  &::before {
+    width: 70px;
+    height: 25px;
+    top: -3px;
+  }  
+
+  a {
+    font-size: 11px;
+  }
+}
+
+}
+
+@media screen and (max-width: 468px) {
+  .service_btn {
+    margin-left: unset;
+    position: absolute;
+    right: 0;
+    margin-top: 10%;
+    width: 95px;
+
+    &::before {
+    width: 95px;
+    height: 30px;
+    top: -3px;
+  }  
+
+}
+}
